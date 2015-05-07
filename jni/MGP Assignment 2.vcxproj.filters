@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="JAM Files">
+      <UniqueIdentifier>{5af98636-ea14-4332-887a-c7ffa925b60e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JAM Files\Header Files">
+      <UniqueIdentifier>{37443fe0-2c65-49d0-8580-28833cfb775c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JAM Files\Source Files">
+      <UniqueIdentifier>{4bdc7002-9262-4d2f-9358-44f90884bdfc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Audio.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\CollisionDetection.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Flocking.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Particle.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\ParticleEffect.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\State.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\StateManager.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Text.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Texture.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Utilities.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Entity.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Button.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\AStar.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\Node.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MapSquare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Robot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JAM\LOS.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\JAM\Audio.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\CollisionDetection.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Flocking.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Particle.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\ParticleEffect.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\State.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\StateManager.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Text.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Texture.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Vec2.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Utilities.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Entity.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Button.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\AStar.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\Node.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MapSquare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Robot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\LOS.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

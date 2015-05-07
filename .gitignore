@@ -1,0 +1,14 @@
+/bin
+/gen
+/libs
+/obj
+/jni/SDL2_ttf
+/jni/SDL2_mixer
+/jni/SDL2_image
+/jni/SDL2
+/docs
+/Documentation.lnk
+/Debug/MGP Assignment 2.pdb
+/Debug/MGP Assignment 2.exe
+/Debug/MGP Assignment 2.ilk
+/jni/Debug
