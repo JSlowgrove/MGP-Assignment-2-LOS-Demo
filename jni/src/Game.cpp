@@ -55,7 +55,7 @@ Game::Game(JAM_StateManager * stateManager, SDL_Renderer* renderer, int screenWi
 	}
 
 	/*initialise the music*/
-	music = new JAM_Audio("aud/Harmful or Fatal.ogg", true);
+	music = new JAM_Audio("aud/Cut Trance.ogg", true);
 
 	/*initialise the mouse*/
 	mouse = JAM_Vec2(0.0f, 0.0f);
