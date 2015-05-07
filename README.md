@@ -14,4 +14,4 @@ Inside the jni folder you must add the following:
 -SDL2_ttf, Containing the source code for SDL2_ttf.  
 -SDL2_mixer, Containing the source code for SDL2-Mixer.  
   
-This is the code for my second MGP Assignment A* Demo.  
+This is the code for my second MGP Assignment Line Of Sight Demo.  
