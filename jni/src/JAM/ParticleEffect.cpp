@@ -28,13 +28,14 @@ JAM_ParticleEffect::JAM_ParticleEffect(std::string fileName, JAM_Vec2 emitter, b
 /**************************************************************************************************************/
 
 /*Constructs a ParticleEffect Object.*/
-JAM_ParticleEffect::JAM_ParticleEffect(JAM_Vec2 emitter, bool emit, SDL_Renderer* renderer, int r, int g, int b)
+JAM_ParticleEffect::JAM_ParticleEffect(JAM_Vec2 emitter, bool emit, SDL_Renderer* renderer, int r, int g, int b, int screenHeight)
 {
 	/*initialize random seed: */
 	srand((unsigned int)time(NULL));
 
 	/*store the variables*/
 	this->emitter = emitter;
+	this->screenHeight = screenHeight;
 
 	/*initialise the move speed*/
 	moveSpeed = JAM_Utilities::scaleNumber(1.0f, screenHeight);

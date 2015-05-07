@@ -56,8 +56,9 @@ public:
 	@param r The red value (0-255).
 	@param g The green value (0-255).
 	@param b The blue value (0-255).
+	@param screenHeight The screen height.
 	*/
-	JAM_ParticleEffect(JAM_Vec2 emitter, bool emit, SDL_Renderer* renderer, int r, int g, int b);
+	JAM_ParticleEffect(JAM_Vec2 emitter, bool emit, SDL_Renderer* renderer, int r, int g, int b, int screenHeight);
 
 	/**
 	Destructs the ParticleEffect Object deleting the Particle Object from memory.

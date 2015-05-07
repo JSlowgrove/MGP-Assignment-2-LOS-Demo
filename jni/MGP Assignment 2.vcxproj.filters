@@ -81,6 +81,9 @@
     <ClCompile Include="src\JAM\LOS.cpp">
       <Filter>JAM Files\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\JAM\ArrowPad.cpp">
+      <Filter>JAM Files\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\JAM\Audio.h">
@@ -138,6 +141,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\JAM\LOS.h">
+      <Filter>JAM Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JAM\ArrowPad.h">
       <Filter>JAM Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

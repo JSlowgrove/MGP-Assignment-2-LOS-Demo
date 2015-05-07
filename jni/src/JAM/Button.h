@@ -14,6 +14,8 @@ private:
 	JAM_Text* text;
 	/**The size of the border from the button and the text*/
 	float border;
+	/**A boolean for the state of the button*/
+	bool state;
 
 public:
 	/**
@@ -56,11 +58,18 @@ public:
 	void update(float dt);
 
 	/**
-	A function that updates the Button.
+	A function that handles the Button input.
+	@param incomingEvent A reference to the incoming event.
+	@returns The state of the button.
+	*/
+	bool input(SDL_Event& incomingEvent);
+
+	/**
+	A function that handles input for a Button tap.
 	@param incomingEvent A reference to the incoming event.
 	@returns If the button is pressed.
 	*/
-	bool input(SDL_Event& incomingEvent);
+	bool tapInput(SDL_Event& incomingEvent);
 
 	/**
 	Draws the Button text to the screen.

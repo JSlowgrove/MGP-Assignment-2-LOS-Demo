@@ -11,6 +11,9 @@ JAM_Button::JAM_Button(JAM_Texture* sprite, float x, float y, float width, float
 
 	/*initialise the border*/
 	border = 0.0f;
+
+	/*initialise state*/
+	state = false;
 }
 
 /**************************************************************************************************************/
@@ -43,6 +46,9 @@ JAM_Button::JAM_Button(JAM_Texture* sprite, float x, float y, std::string messag
 	
 	/*set the dimensions of the button*/
 	setDimensions(size);
+
+	/*initialise state*/
+	state = false;
 }
 
 /**************************************************************************************************************/
@@ -88,13 +94,60 @@ bool JAM_Button::input(SDL_Event& incomingEvent)
 			if (overButton)
 			{
 				/*the button is pressed*/
+				state = true;
+			}
+		}
+		break;
+
+	case SDL_MOUSEBUTTONUP: /*If released*/
+
+		/*if the left mouse button*/
+		if (incomingEvent.button.button == SDL_BUTTON_LEFT)
+		{
+			/*the button is not pressed*/
+			state = false;
+		}
+		break;
+	}
+
+	/*return the state*/
+	return state;
+}
+
+/**************************************************************************************************************/
+
+/*Handles the input for the button.*/
+bool JAM_Button::tapInput(SDL_Event& incomingEvent)
+{
+	/*a vec2 for testing the touch position*/
+	JAM_Vec2 touchPosition;
+
+	/*get the touch position*/
+	touchPosition.x = ((float)incomingEvent.motion.x);
+	touchPosition.y = ((float)incomingEvent.motion.y);
+
+	/*a ternary operator checking if the touch position is above the button*/
+	bool overButton = (touchPosition.x > getPosition().x && touchPosition.x < getPosition().x + getDimensions().x
+		&& touchPosition.y > getPosition().y && touchPosition.y < getPosition().y + getDimensions().y) ? 1 : 0;
+
+	switch (incomingEvent.type)
+	{
+	case SDL_MOUSEBUTTONDOWN: /*If pressed*/
+
+		/*if the left mouse button*/
+		if (incomingEvent.button.button == SDL_BUTTON_LEFT)
+		{
+			/*if the position is above the button*/
+			if (overButton)
+			{
+				/*the button is tapped*/
 				return true;
 			}
 		}
 		break;
 	}
 
-	/*the button was not pressed*/
+	/*the button is not tapped*/
 	return false;
 }
 

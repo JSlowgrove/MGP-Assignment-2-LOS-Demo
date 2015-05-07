@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\JAM\ArrowPad.cpp" />
     <ClCompile Include="src\JAM\AStar.cpp" />
     <ClCompile Include="src\JAM\Audio.cpp" />
     <ClCompile Include="src\JAM\Button.cpp" />
@@ -33,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\JAM\ArrowPad.h" />
     <ClInclude Include="src\JAM\AStar.h" />
     <ClInclude Include="src\JAM\Audio.h" />
     <ClInclude Include="src\JAM\Button.h" />
