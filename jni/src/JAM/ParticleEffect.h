@@ -8,7 +8,7 @@
 #include "Vec2.h"
 #include "Utilities.h"
 
-/**A definition for the max number of particles*/
+/**A definition for the max number of particles.*/
 #define MAX_NUMBER_OF_PARTICLES 100
 
 /**
@@ -19,17 +19,17 @@ Reference ~ This is a modified version of my PGG Assignment 2 Particle Effect cl
 class JAM_ParticleEffect
 {
 private:
-	/**A vector of Particle objects*/
+	/**A vector of Particle objects.*/
 	std::vector<JAM_Particle*> particles;
-	/**A pointer to the Texture of the particles*/
+	/**A pointer to the Texture of the particles.*/
 	JAM_Texture* texture;
-	/**The move speed of the particles*/
+	/**The move speed of the particles.*/
 	float moveSpeed;
-	/**The position of the Particle emitter*/
+	/**The position of the Particle emitter.*/
 	JAM_Vec2 emitter;
-	/**A boolean for if the ParticleEffect should emit*/
+	/**A boolean for if the ParticleEffect should emit.*/
 	bool emit;
-	/**The screen height*/
+	/**The screen height.*/
 	int screenHeight;
 
 	/**
@@ -39,7 +39,7 @@ private:
 
 public:
 	/**
-	Constructs a ParticleEffect Object.
+	Constructs the ParticleEffect Object.
 	@param objectName The file name of the texture that the Particle will use.
 	@param emitter The position that the particle effect emits from.
 	@param emit The new value of the emit boolean.
@@ -49,7 +49,7 @@ public:
 	JAM_ParticleEffect(std::string fileName, JAM_Vec2 emitter, bool emit, SDL_Renderer* renderer, int screenHeight);
 
 	/**
-	Constructs a ParticleEffect Object.
+	Constructs the ParticleEffect Object.
 	@param emitter The position that the particle effect emits from.
 	@param emit The new value of the emit boolean.
 	@param renderer A pointer to the renderer.

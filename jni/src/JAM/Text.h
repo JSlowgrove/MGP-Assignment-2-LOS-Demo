@@ -7,30 +7,31 @@
 #include "Vec2.h"
 
 /**
-@brief Creates a Text Texture for use with a renderer
+@brief Creates a Text Texture for use with a renderer.
 Creates a Text Texture from an image file, this can then be used with a renderer.
+@author Jamie Slowgrove
 Reference ~ This is a modified version of my AI Assignment 1 Text class.
 */
 class JAM_Text
 {
 private:
-	/**Font*/
+	/**Font.*/
 	TTF_Font* font;
-	/**Font colour*/
+	/**Font colour.*/
 	SDL_Color fontColour;
-	/**The Texture data*/
+	/**The Texture data.*/
 	SDL_Texture* textureData;
-	/**A pointer to the render*/
+	/**A pointer to the render.*/
 	SDL_Renderer* renderer;
-	/**Font size*/
+	/**Font size.*/
 	int fontSize;
-	/**The text*/
+	/**The text.*/
 	std::string text;
-	/**The font location*/
+	/**The font location.*/
 	std::string fontLocation;
-	/**The texture width*/
+	/**The texture width.*/
 	int textureWidth;
-	/**The texture height*/
+	/**The texture height.*/
 	int textureHeight;
 
 	/**
@@ -41,7 +42,7 @@ private:
 public:
 
 	/**
-	Constructs a Text Texture.
+	Constructs the Text Texture.
 	Creates a Text Texture using an image location and a renderer. Font size and colour will be default (size 10 and black).
 	@param text The text to display.
 	@param fontLocation The location of the font file.
@@ -50,7 +51,7 @@ public:
 	JAM_Text(std::string text, std::string fontLocation, SDL_Renderer* renderer);
 
 	/**
-	Constructs a Text Texture.
+	Constructs the Text Texture.
 	Creates a Text Texture using an image location and a renderer. Font colour will be default (black). Font size will be set to the input.
 	@param text The text to display.
 	@param fontLocation The location of the font file.
@@ -60,7 +61,7 @@ public:
 	JAM_Text(std::string text, std::string fontLocation, int fontSize, SDL_Renderer* renderer);
 
 	/**
-	Constructs a Text Texture.
+	Constructs the Text Texture.
 	Creates a Text Texture using an image location and a renderer. Font size will be default (size 10). Colour will be set to the input.
 	@param text The text to display.
 	@param fontLocation The location of the font file.
@@ -72,7 +73,7 @@ public:
 	JAM_Text(std::string text, std::string fontLocation, SDL_Renderer* renderer, int r, int g, int b);
 
 	/**
-	Constructs a Text Texture.
+	Constructs the Text Texture.
 	Creates a Text Texture using an image location and a renderer.
 	@param text The text to display.
 	@param fontLocation The location of the font file.
@@ -97,7 +98,7 @@ public:
 	void pushToScreen(int x, int y);
 
 	/**
-	Sets the colour of the text.
+	Setter # Sets the colour of the text.
 	@param r The value of red. (0-255)
 	@param g The value of green. (0-255)
 	@param b The value of blue. (0-255)
@@ -105,19 +106,19 @@ public:
 	void setColour(int r, int g, int b);
 
 	/**
-	Sets the font size of the text.
+	Setter # Sets the font size of the text.
 	@param fontSize The font size of the text.
 	*/
 	void setFontSize(int fontSize);
 
 	/**
-	Sets the font of the text.
+	Setter # Sets the font of the text.
 	@param fontLocation The location of the font file.
 	*/
 	void setFont(std::string fontLocation);
 
 	/**
-	Sets the text.
+	Setter # Sets the text.
 	@param text The text to display.
 	*/
 	void setText(std::string text);

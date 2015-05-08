@@ -7,24 +7,25 @@
 
 /**
 @brief Creates an ArrowPad object.
+@author Jamie Slowgrove
 */
 class JAM_ArrowPad
 {
 private:
-	/**An up Button*/
+	/**An up Button.*/
 	JAM_Button* up;
-	/**An down Button*/
+	/**An down Button.*/
 	JAM_Button* down;
-	/**An left Button*/
+	/**An left Button.*/
 	JAM_Button* left;
-	/**An right Button*/
+	/**An right Button.*/
 	JAM_Button* right;
-	/**The commands for the user*/
+	/**The commands for the user.*/
 	bool upCmd, downCmd, leftCmd, rightCmd;
 
 public:
 	/**
-	Constructs a Button object.
+	Constructs the Button object.
 	@param x The x position of the Button.
 	@param y The y position of the Button.
 	@param width The width of the Button.
@@ -34,7 +35,7 @@ public:
 	JAM_ArrowPad(float x, float y, float width, float height, SDL_Renderer* renderer);
 
 	/**
-	Destructs a ArrowPad object.
+	Destructs the ArrowPad object.
 	*/
 	~JAM_ArrowPad();
 

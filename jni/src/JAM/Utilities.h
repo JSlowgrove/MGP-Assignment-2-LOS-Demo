@@ -2,7 +2,7 @@
 
 #include "Vec2.h"
 
-/**A definition of PI*/
+/**A definition of PI.*/
 #define PI 3.141596f
 
 /**

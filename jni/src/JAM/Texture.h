@@ -7,31 +7,32 @@
 /**
 @brief Creates a Texture for use with a renderer.
 Creates a Texture from an image file, this can then be used with a renderer.
+@author Jamie Slowgrove
 Reference ~ This is a modified version of my PGG Assignment 1 Texture class.
 */
 class JAM_Texture
 {
 private:
-	/**The Texture data*/
+	/**The Texture data.*/
 	SDL_Texture* textureData;
-	/**The width of the Texture*/
+	/**The width of the Texture.*/
 	int textureWidth;
-	/**The height of the Texture*/
+	/**The height of the Texture.*/
 	int textureHeight;
 
 public:
 	/**
-	Constructs a Texture.
+	Constructs the Texture.
 	Creates a Texture using an RGB value. This will create a 1x1 rectangle of that colour that can be scaled.
 	@param renderer A pointer to the renderer.
 	@param r The red value.
 	@param g The green value.
-	@param b The blue value
+	@param b The blue value.
 	*/
 	JAM_Texture(SDL_Renderer* renderer, int r, int g, int b);
 
 	/**
-	Constructs a Texture
+	Constructs the Texture.
 	Creates a Texture using an image location and a renderer. This is for use with SDL image.
 	@param fileLocation The location of the image file.
 	@param renderer The renderer.
@@ -39,12 +40,12 @@ public:
 	JAM_Texture(std::string fileLocation, SDL_Renderer* renderer);
 
 	/**
-	Constructs a Texture
+	Constructs the Texture.
 	Creates a Texture using an image location and a renderer. The magenta pixels of this image can
 	represent alpha if needed.
 	@param fileLocation The location of the image file.
 	@param renderer The renderer.
-	@param magentaAlpha If true any magenta pixels in the image will be converted to alpha
+	@param magentaAlpha If true any magenta pixels in the image will be converted to alpha.
 	*/
 	JAM_Texture(std::string fileLocation, SDL_Renderer* renderer, bool magentaAlpha);
 
@@ -54,19 +55,19 @@ public:
 	~JAM_Texture();
 
 	/**
-	Getter # Returns a pointer to the Texture
+	Getter # Returns a pointer to the Texture.
 	@returns A pointer to the Texture data.
 	*/
 	SDL_Texture* getTexture();
 
 	/**
-	Getter # Returns textureWidth
+	Getter # Returns textureWidth.
 	@returns The value of textureWidth.
 	*/
 	int getWidth();
 
 	/**
-	Getter # Returns textureHeight
+	Getter # Returns textureHeight.
 	@returns The value of textureHeight.
 	*/
 	int getHeight();

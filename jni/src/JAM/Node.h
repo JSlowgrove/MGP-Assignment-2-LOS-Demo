@@ -2,20 +2,18 @@
 
 /**
 @brief Creates a Node object for use with path finding.
+@author Jamie Slowgrove
 Reference ~ This is a modified version of my nodes from my AI assignment.
 */
 class JAM_Node
 {
 private:
 	/**The index of the parent node.*/
-	int parentNodeXIndex;
-	int parentNodeYIndex;
+	int parentNodeXIndex, parentNodeYIndex;
 	/**The index of the node.*/
-	int nodeXIndex;
-	int nodeYIndex;
+	int nodeXIndex, nodeYIndex;
 	/**Boolean values to if they are a specific node.*/
-	bool startNode;
-	bool endNode;
+	bool startNode, endNode;
 	/**If the node safe to walk on.*/
 	bool safe;
 	/**The cost to move to the node.*/
@@ -27,14 +25,14 @@ private:
 
 public:
 	/**
-	Constructs a Node object.
+	Constructs the Node object.
 	@param nodeXIndex The Node x index.
 	@param nodeYIndex The Node y index.
 	*/
 	JAM_Node(int nodeXIndex, int nodeYIndex);
 
 	/**
-	Destructs a Game object.
+	Destructs the Node object.
 	*/
 	~JAM_Node();
 

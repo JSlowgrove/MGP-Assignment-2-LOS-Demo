@@ -5,21 +5,22 @@
 #include "Text.h"
 
 /**
-@brief Creates an Button object that inherits Entity.
+@brief Creates a Button object that inherits Entity.
+@author Jamie Slowgrove
 */
 class JAM_Button : public JAM_Entity
 {
 private:
-	/**The text of the button*/
+	/**The text of the button.*/
 	JAM_Text* text;
-	/**The size of the border from the button and the text*/
+	/**The size of the border from the button and the text.*/
 	float border;
-	/**A boolean for the state of the button*/
+	/**A boolean for the state of the button.*/
 	bool state;
 
 public:
 	/**
-	Constructs a Button object.
+	Constructs the Button object.
 	@param sprite A pointer to the objects Texture.
 	@param x The x position of the Button.
 	@param y The y position of the Button.
@@ -29,7 +30,7 @@ public:
 	JAM_Button(JAM_Texture* sprite, float x, float y, float width, float height);
 
 	/**
-	Constructs a Button object.
+	Constructs the Button object.
 	@param sprite A pointer to the objects Texture.
 	@param x The x position of the Button.
 	@param y The y position of the Button.
@@ -47,7 +48,7 @@ public:
 		int fontSize, int r, int g, int b, SDL_Renderer* renderer, float border, float minWidth, float minHeight);
 
 	/**
-	Destructs a Button object.
+	Destructs the Button object.
 	*/
 	~JAM_Button();
 

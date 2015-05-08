@@ -7,6 +7,7 @@
 
 /**
 @brief Creates an object for A* path finding.
+@author Jamie Slowgrove
 Reference ~ This is a modified version of my A* path-finding from my AI assignment.
 */
 class JAM_AStar
@@ -14,22 +15,21 @@ class JAM_AStar
 private:
 	/**The arrays of Nodes.*/
 	std::vector<std::vector<JAM_Node*>> nodes;
+	/**The open list of Nodes.*/
 	std::vector<JAM_Node> openList;
+	/**The closed list of Nodes.*/
 	std::vector<JAM_Node> closedList;
+	/**The array of Nodes for the best path.*/
 	std::vector<JAM_Node> bestPath;
 	/**The number of nodes.*/
-	int xNodes;
-	int yNodes;
+	int xNodes, yNodes;
 	/**The current node index.*/
-	int currentX;
-	int currentY;
+	int currentX, currentY;
 	/**The end node index.*/
-	int endX;
-	int endY;
+	int endX, endY;
 	/**The start node index.*/
-	int startX;
-	int startY;
-	/**The Dimensions of a node*/
+	int startX, startY;
+	/**The Dimensions of a node.*/
 	JAM_Vec2 nodeDimensions;
 
 	/**
@@ -61,7 +61,7 @@ private:
 
 public:
 	/**
-	Constructs an AStar object.
+	Constructs the AStar object.
 	@param xNodes The number of nodes in a row.
 	@param yNodes The number of rows in the map.
 	@param nodeWidth The width of a node.
@@ -70,12 +70,22 @@ public:
 	JAM_AStar(int xNodes, int yNodes, float nodeWidth, float nodeHeight);
 
 	/**
-	Destructs an AStar object.
+	Destructs the AStar object.
 	*/
 	~JAM_AStar();
 
+	/**
+	Setter # Sets the Node at the inputed index to a danger Node.
+	@param nodeXIndex The x index of the Node.
+	@param nodeYIndex The y index of the Node.
+	*/
 	void setDangerNode(int nodeXIndex, int nodeYIndex);
 
+	/**
+	Setter # Sets the Node at the inputed index to a safe Node.
+	@param nodeXIndex The x index of the Node.
+	@param nodeYIndex The y index of the Node.
+	*/
 	void setSafeNode(int nodeXIndex, int nodeYIndex);
 
 	/**
@@ -88,7 +98,7 @@ public:
 	void findNewPath(int startX, int startY, int endX, int endY);
 
 	/**
-	Returns the position of the next node in the path.
+	Getter # Gets the position of the next node in the path.
 	@returns The Node position.
 	*/
 	JAM_Vec2 getNextPathNode();

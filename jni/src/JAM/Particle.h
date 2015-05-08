@@ -12,24 +12,24 @@ Reference ~ This is a modified version of my PGG Assignment 2 Particle class.
 class JAM_Particle
 {
 private:
-	/**A pointer to the Texture*/
+	/**A pointer to the Texture.*/
 	JAM_Texture* texture;
-	/**The direction of the Particle*/
+	/**The direction of the Particle.*/
 	JAM_Vec2 direction;
-	/**The Position of the Particle*/
+	/**The Position of the Particle.*/
 	JAM_Vec2 position;
-	/**The scale of the Particle*/
+	/**The scale of the Particle.*/
 	float scaleValue;
-	/**The movement speed of the Particle*/
+	/**The movement speed of the Particle.*/
 	float moveSpeed;
 
 public:
 	/**
-	Constructs a Particle Object.
+	Constructs the Particle Object.
 	@param square A pointer to the Texture.
 	@param scaleValue The scale of the Particle.
-	@param direction The direction of the Particle
-	@param moveSpeed The move speed of the Particle
+	@param direction The direction of the Particle.
+	@param moveSpeed The move speed of the Particle.
 	@param position The position of the Particle.
 	*/
 	JAM_Particle(JAM_Texture* texture, float scaleValue, JAM_Vec2 direction, float moveSpeed, JAM_Vec2 position);
@@ -40,7 +40,7 @@ public:
 	~JAM_Particle();
 
 	/**
-	A function that updates the Particle
+	A function that updates the Particle.
 	@param dt The delta time.
 	*/
 	void update(float dt);

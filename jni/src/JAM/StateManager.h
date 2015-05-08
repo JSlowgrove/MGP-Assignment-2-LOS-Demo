@@ -7,22 +7,23 @@
 /**
 @brief Creates a StateManager object.
 Creates a StateManager object to be inherited.
+@author Jamie Slowgrove
 Reference ~ This is a modified version of my PGG Assignment 1 State Manager class.
 */
 class JAM_StateManager
 {
 private:
-	/**The current states that are in use*/
+	/**The current states that are in use.*/
 	std::vector<JAM_State*> currentStates;
 
 public:
 	/**
-	Constructs a StateManager object.
+	Constructs the StateManager object.
 	*/
 	JAM_StateManager();
 
 	/**
-	Destructs a StateManager object.
+	Destructs the StateManager object.
 	*/
 	~JAM_StateManager();
 

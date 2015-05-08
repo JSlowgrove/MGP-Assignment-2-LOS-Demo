@@ -4,6 +4,7 @@
 
 /**
 @brief Creates a MapSquare object that inherits Entity.
+@author Jamie Slowgrove
 */
 class MapSquare : public JAM_Entity
 {
@@ -13,7 +14,7 @@ private:
 
 public:
 	/**
-	Constructs a MapSquare object.
+	Constructs the MapSquare object.
 	@param sprite A pointer to the objects Texture.
 	@param x The x position of the MapSquare.
 	@param y The y position of the MapSquare.
@@ -24,7 +25,7 @@ public:
 	MapSquare(JAM_Texture* sprite, float x, float y, float width, float height, bool danger);
 
 	/**
-	Destructs an MapSquare object.
+	Destructs the MapSquare object.
 	*/
 	~MapSquare();
 

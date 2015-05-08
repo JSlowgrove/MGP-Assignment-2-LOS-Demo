@@ -10,22 +10,23 @@
 
 /**
 @brief Creates a Flocking object.
+@author Jamie Slowgrove
 Reference ~ This code is based upon Pseudo code from https://www.macs.hw.ac.uk/~dwcorne/Teaching/Boids%20Pseudocode.htm
 */
 class JAM_Flocking
 {
 private:
-	/**A texture of a white square*/
+	/**A texture of a white square.*/
 	JAM_Texture * whiteSquare;
-	/**A vector of Particle boids*/
+	/**A vector of Particle boids.*/
 	std::vector<JAM_Particle*> boids;
-	/**What to do with the rule (1 == possitve, 0 = neutral, -1 == negative)*/
+	/**What to do with the rule. (1 == possitve, 0 = neutral, -1 == negative)*/
 	int applyRule1, applyRule2, applyRule3;
-	int xBoundary; 
-	int yBoundary;
-	/**The max velocity*/
+	/**The boundaries of the boids.*/
+	int xBoundary, yBoundary;
+	/**The max velocity.*/
 	float maxVel;
-	/**The screen height*/
+	/**The screen height.*/
 	int screenHeight;
 
 	/**
@@ -64,7 +65,7 @@ private:
 
 public:
 	/**
-	Constructs a Flocking object.
+	Constructs the Flocking object.
 	@param numberOfBoids The number of boids.
 	@param texture A pointer to the texture for the boids.
 	@param xBoundary The rough x boundary of the boids.
@@ -75,12 +76,12 @@ public:
 	JAM_Flocking(int numberOfBoids, JAM_Texture* texture, int xBoundary, int yBoundary, float maxVel, int screenHeight);
 
 	/**
-	Destructs an Flocking object.
+	Destructs the Flocking object.
 	*/
 	~JAM_Flocking();
 
 	/**
-	A function that updates the Flocking
+	A function that updates the Flocking.
 	@param dt The delta time.
 	*/
 	void update(float dt);
@@ -93,19 +94,19 @@ public:
 
 	/**
 	Setter # Set applyRule1.
-	@param applyRule1 What to do with the rule (1 == possitve, 0 = neutral, -1 == negative)
+	@param applyRule1 What to do with the rule. (1 == possitve, 0 = neutral, -1 == negative)
 	*/
 	void setRule1(int applyRule1);
 
 	/**
 	Setter # Set applyRule2.
-	@param applyRule2 What to do with the rule (1 == possitve, 0 = neutral, -1 == negative)
+	@param applyRule2 What to do with the rule. (1 == possitve, 0 = neutral, -1 == negative)
 	*/
 	void setRule2(int applyRule2);
 
 	/**
 	Setter # Set applyRule3.
-	@param applyRule3 What to do with the rule (1 == possitve, 0 = neutral, -1 == negative)
+	@param applyRule3 What to do with the rule. (1 == possitve, 0 = neutral, -1 == negative)
 	*/
 	void setRule3(int applyRule3);
 };

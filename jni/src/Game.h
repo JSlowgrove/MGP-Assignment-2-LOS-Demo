@@ -16,36 +16,37 @@
 #include "Robot.h"
 
 /**
-@brief Creates an Game object that inherits State and runs the Game.
+@brief Creates a Game object that inherits State and runs the Game.
+@author Jamie Slowgrove
 */
 class Game : public JAM_State
 {
 private:
 	/**The 2D array of MapSquare objects.*/
 	std::vector<std::vector<MapSquare*>> mapSquares;
-	/**The 2D array of nodes*/
+	/**The 2D array of nodes.*/
 	std::vector<std::vector<JAM_Node*>> nodes;
-	/**A pointer to the background music*/
+	/**A pointer to the background music.*/
 	JAM_Audio* music;
-	/**The mouse position*/
+	/**The mouse position.*/
 	JAM_Vec2 mouse;
-	/**The target index*/
+	/**The target index.*/
 	JAM_Vec2 target;
-	/**The size of the squares*/
+	/**The size of the squares.*/
 	int squareScale;
-	/**The texture for the border*/
+	/**The texture for the border.*/
 	JAM_Texture* border;
-	/**The texture for the target*/
+	/**The texture for the target.*/
 	JAM_Texture* targetTexture;
-	/**The texture for the walls*/
+	/**The texture for the walls.*/
 	JAM_Texture* wall;
-	/**The button to toggle placement*/
+	/**The button to toggle placement.*/
 	JAM_Button* toggle;
-	/**The type of object to place (1 = target, -1 = wall)*/
+	/**The type of object to place. (1 = target, -1 = wall)*/
 	int placementType;
-	/**The AStar Robot*/
+	/**The AStar Robot.*/
 	Robot* robot;
-	/**A boolean for if the target is visible*/
+	/**A boolean for if the target is visible.*/
 	bool visible;
 
 	/**
@@ -64,7 +65,7 @@ private:
 
 public:
 	/**
-	Constructs a Game object.
+	Constructs the Game object.
 	@param stateManager A pointer to the StateManager.
 	@param renderer A pointer to the renderer.
 	@param screenWidth The screen width.
@@ -73,7 +74,7 @@ public:
 	Game(JAM_StateManager* stateManager, SDL_Renderer* renderer, int screenWidth, int screenHeight);
 
 	/**
-	Destructs an Game object.
+	Destructs the Game object.
 	*/
 	~Game();
 

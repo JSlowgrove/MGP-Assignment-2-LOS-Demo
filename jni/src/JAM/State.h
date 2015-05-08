@@ -3,29 +3,30 @@
 #include <SDL.h>
 #include <string.h>
 
-/**Forward declaration of StateManager for the pointer to the StateManager*/
+/**Forward declaration of StateManager for the pointer to the StateManager.*/
 class JAM_StateManager;
 
 /**
 @brief Creates a State object.
 Creates a State object to be inherited.
+@author Jamie Slowgrove
 Reference ~ This is a modified version of my PGG Assignment 1 State class.
 */
 class JAM_State
 {
 protected:
-	/**A pointer to the state manager*/
+	/**A pointer to the state manager.*/
 	JAM_StateManager* stateManager;
-	/**The render to display to*/
+	/**The render to display to.*/
 	SDL_Renderer* renderer;
-	/**The width of the screen*/
+	/**The width of the screen.*/
 	int screenWidth;
-	/**The height of the screen*/
+	/**The height of the screen.*/
 	int screenHeight;
 
 public:
 	/**
-	Constructs a State object.
+	Constructs the State object.
 	@param stateManager A pointer to the StateManager.
 	@param renderer A pointer to the renderer in use.
 	@param screenWidth The screen width.

@@ -4,13 +4,14 @@
 
 /**
 @brief Creates a Robot object that inherits Entity.
+@author Jamie Slowgrove
 */
 class Robot : public JAM_Entity
 {
 private:
 public:
 	/**
-	Constructs a Robot object.
+	Constructs the Robot object.
 	@param sprite A pointer to the objects Texture.
 	@param x The x position of the Robot.
 	@param y The y position of the Robot.
@@ -20,7 +21,7 @@ public:
 	Robot(JAM_Texture* sprite, float x, float y, float width, float height);
 
 	/**
-	Destructs a Robot object.
+	Destructs the Robot object.
 	*/
 	~Robot();
 
