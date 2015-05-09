@@ -23,6 +23,13 @@ Inside local.properties modify to the following:
 sdk.dir="Computer's Android SDK path location"  
 ndk.dir="Computer's Android NDK path location"  
   
+Inside buildDebug.bat modify the following:  
+"C:\SDKs\android-ndk-r10d\ndk-build.cmd" to "Computer's Android NDK path location\ndk-build.cmd"  
+  
+Inside deployDebug.bat modify the following:  
+"C:/Users/Jamie/AppData/Local/Android/android-sdk/platform-tools/adb.exe"   
+to "Computer's Android SDK path location/adb.exe"    
+  
 Asset References:  
   
 Music:  
