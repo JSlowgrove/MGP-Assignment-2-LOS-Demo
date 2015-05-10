@@ -3,15 +3,23 @@
 Created by Jamie Slowgrove.  
 You can do what you want with the code and in this project, however you must credit me and add a link back to the git repository.  
   
-Created using SDL2, SDL2_image, SDL2_mixer, SDL2_ttf, Android NDK and the Android SDK:  
+Created using SDL2, SDL2_image, SDL2_mixer, SDL2_ttf, JDK, ANT, Android NDK and the Android SDK:  
 https://www.libsdl.org/  
 https://www.libsdl.org/projects/SDL_image/  
 https://www.libsdl.org/projects/SDL_mixer/   
 https://www.libsdl.org/projects/SDL_ttf/  
+http://www.oracle.com/technetwork/java/javase/downloads/index.html  
+http://ant.apache.org/bindownload.cgi  
 https://developer.android.com/tools/sdk/ndk/index.html  
 https://developer.android.com/sdk/index.html  
   
 Required steps to build on your computer:  
+  
+You will need to install the Java Development Kit (JDK), Android NDK, Android SDK and ANT to build on your computer.  
+  
+Once the JDK install you need to find the installation directory and create an Environment Variable for your computer  
+called JAVA_HOME in all caps and the value should be the exact path to your JDK installation.  
+(Control Panel -> System -> Advanced System Settings -> Environment Variables)  
   
 Inside the jni folder you must add the following folders:  
 -SDL2, Containing the source code for SDL2.  
