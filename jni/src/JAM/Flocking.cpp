@@ -54,6 +54,9 @@ void JAM_Flocking::update(float dt)
 	JAM_Vec2 v3 = JAM_Vec2( 0.0f, 0.0f );
 	JAM_Vec2 v4 = JAM_Vec2( 0.0f, 0.0f );
 
+	/*The speed increase of the boids*/
+	float speed = 25.0f;
+
 	/*test each Boid*/
 	for (unsigned int i = 0; i < boids.size(); i++)
 	{
@@ -72,7 +75,7 @@ void JAM_Flocking::update(float dt)
 		/*limit the velocity of the Boid*/
 		limitVelocity(i);
 		/*update the Boid position*/
-		boids[i]->setPosition(boids[i]->getPosition() + boids[i]->getDirection());
+		boids[i]->setPosition(boids[i]->getPosition() + (boids[i]->getDirection() * dt) * speed);
 	}
 }
 
@@ -91,7 +94,7 @@ void JAM_Flocking::draw(SDL_Renderer* renderer)
 
 /**************************************************************************************************************/
 
-/*applies Boid rule 1*/
+/*applies Boid rule 1 (cohesion)*/
 JAM_Vec2 JAM_Flocking::rule1(int boidIndex)
 {
 	/*initialise the new velocity*/
@@ -111,7 +114,7 @@ JAM_Vec2 JAM_Flocking::rule1(int boidIndex)
 	}
 
 	/*divide the center of mass by the number of Boid objects tested*/
-	cOfM = cOfM / (float)(boids.size() - 2);
+	cOfM = cOfM / (float)(boids.size() - 1);
 
 	/*set the new velocity to the amount to move towards the Boid (1% of the distance in this case)*/
 	vel = (cOfM - boids[boidIndex]->getPosition()) / 100;
@@ -122,7 +125,7 @@ JAM_Vec2 JAM_Flocking::rule1(int boidIndex)
 
 /**************************************************************************************************************/
 
-/*applies Boid rule 2*/
+/*applies Boid rule 2 (speration)*/
 JAM_Vec2 JAM_Flocking::rule2(int boidIndex)
 {
 	/*the new velocity*/
@@ -154,7 +157,7 @@ JAM_Vec2 JAM_Flocking::rule2(int boidIndex)
 
 /**************************************************************************************************************/
 
-/*applies Boid rule 3*/
+/*applies Boid rule 3 (alignment)*/
 JAM_Vec2 JAM_Flocking::rule3(int boidIndex)
 {
 	/*initialise the new velocity*/
@@ -172,7 +175,7 @@ JAM_Vec2 JAM_Flocking::rule3(int boidIndex)
 	}
 
 	/*get the average velocity*/
-	vel = vel / (float)(boids.size() - 2);
+	vel = vel / (float)(boids.size() - 1);
 
 	/*set it to about an eighth of the Boid velocity*/
 	vel = (vel - boids[boidIndex]->getDirection()) / 8;
